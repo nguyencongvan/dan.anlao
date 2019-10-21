@@ -1,0 +1,21 @@
+def osszeg(s):
+    sum = 0;
+    for e in s:
+        if e[0]=='+':
+            sum += int(e[1:len(e)])
+        if e[0]=='-':
+            sum -= int(e[1:len(e)])
+    return sum
+        
+def main():
+    s = """+12
+-10
+-4
+-110292"""
+    s = s.split()
+    print(osszeg(s))
+    
+    
+    
+if __name__ == "__main__":
+	main()
